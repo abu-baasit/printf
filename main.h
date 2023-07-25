@@ -3,13 +3,12 @@
 #include <stdarg.h>
 #include <stdlib.h>
 #include <unistd.h>
-#define <string.h>
 /**
  * struct buffer - buffer structure for our implementation of printf
  * @buf: buffer to write characters
  * @tmpbuf: tmp buffer to write to before putting in buffer
  * @format: the string passed to our printf
- * @my_list_arg: the variadic address point
+ * @my_list_args: the variadic address point
  * @bp: the current point in the buffer
  * @tp: the current point in the tmp buffer
  * @fp: the current point in the format
