@@ -3,6 +3,7 @@
 #include <stdarg.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <string.h>
 /**
  * struct buffer - buffer structure for our implementation of printf
  * @buf: buffer to write characters
@@ -16,14 +17,14 @@
  */
 typedef struct buffer
 {
- char *buf;
- char *tmpbuf;
- const char *format;
- va_list my_list_args;
- int bp;
- int tp;
- int fp;
- unsigned int printed;
+char *buf;
+char *tmpbuf;
+const char *format;
+va_list my_list_args;
+int bp;
+int tp;
+int fp;
+unsigned int printed;
 } buffer;
 /**
  *struct handlers - handlers struct
@@ -39,15 +40,15 @@ typedef struct buffer
  */
 typedef struct handlers
 {
- unsigned int plus;
- unsigned int space;
- unsigned int hash;
- unsigned int zero;
- unsigned int minus;
- unsigned int width;
- unsigned int precision;
- unsigned int h_mod;
- unsigned int l_mod;
+unsigned int plus;
+unsigned int space;
+unsigned int hash;
+unsigned int zero;
+unsigned int minus;
+unsigned int width;
+unsigned int precision;
+unsigned int h_mod;
+unsigned int l_mod;
 } han_s;
 /**
  * struct ops - a structure containing a char to compare with formatb modifiers
@@ -57,8 +58,8 @@ typedef struct handlers
  */
 typedef struct ops
 {
- char operation;
- int (*func)(va_list);
+char operation;
+int (*func)(va_list);
 } ops_f;
 
 int _printf(const char *format, ...);
